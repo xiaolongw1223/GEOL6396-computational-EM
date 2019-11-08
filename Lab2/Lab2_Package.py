@@ -330,19 +330,19 @@ class Discretize(Mesh):
         
         
         if direc == 'x':
-            e = np.ones(self.nCx)
+            e = np.ones(self.nCx+1)
             Dx = sp.spdiags([-e, e], [0, 1], self.nCx, self.nCx+1)
             D = sp.kron(sp.kron(Iy, Dx), Iz)
         
         
         if direc == 'y':
-            e = np.ones(self.nCy)
+            e = np.ones(self.nCy+1)
             Dy = sp.spdiags([-e, e], [0, 1], self.nCy, self.nCy+1)
             D = sp.kron(sp.kron(Dy, Ix), Iz)
         
         
         if direc == 'z':
-            e = np.ones(self.nCz)
+            e = np.ones(self.nCz+1)
             Dz = sp.spdiags([-e, e], [0, 1], self.nCz, self.nCz+1)
             D = sp.kron(sp.kron(Iy, Ix), Dz)
         
@@ -377,19 +377,19 @@ class Discretize(Mesh):
         
         
         if direc == 'x':
-            e = np.ones(self.nCx) * 0.5
+            e = np.ones(self.nCx+1) * 0.5
             Dx = sp.spdiags([e, e], [0, 1], self.nCx, self.nCx+1)
             D = sp.kron(sp.kron(Iy, Dx), Iz)
         
         
         if direc == 'y':
-            e = np.ones(self.nCy) * 0.5
+            e = np.ones(self.nCy+1) * 0.5
             Dy = sp.spdiags([e, e], [0, 1], self.nCy, self.nCy+1)
             D = sp.kron(sp.kron(Dy, Ix), Iz)
         
         
         if direc == 'z':
-            e = np.ones(self.nCz)* 0.5
+            e = np.ones(self.nCz+1)* 0.5
             Dz = sp.spdiags([e, e], [0, 1], self.nCz, self.nCz+1)
             D = sp.kron(sp.kron(Iy, Ix), Dz)
         
