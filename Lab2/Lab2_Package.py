@@ -63,9 +63,6 @@ class Mesh(object):
         Px: power number of padding cells (exponent)
         
         
-        
-        
-        
         listy, listz is totally same with listx
         
         
