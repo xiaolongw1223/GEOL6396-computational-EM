@@ -1,4 +1,4 @@
-This repository is created for course - GEOL6396-Computational EM in University of Houston.
+This repository is created for the course - GEOL6396-Computational EM in University of Houston.
 The language of the repository is python 100%.
 
 Brife introductions of the repository are summarized below:
