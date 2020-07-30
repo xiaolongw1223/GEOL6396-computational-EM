@@ -3,7 +3,7 @@
 """
 Created on Sat Oct 26 16:59:12 2019
 
-@author: wxl
+@author: xiaolong Wei
 """
 import scipy.io as sio
 import numpy as np

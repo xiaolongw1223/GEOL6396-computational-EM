@@ -466,6 +466,4 @@ class Utils(Mesh):
         phi_true_vec = phi_true.flatten('F')
         q_corr = A*phi_true_vec
 
-
-
         return(q_corr)
