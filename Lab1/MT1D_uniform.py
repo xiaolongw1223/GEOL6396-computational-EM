@@ -9,6 +9,7 @@ Created on Wed Sep 18 15:47:25 2019
 
 import numpy as np
 import scipy.sparse as sp
+import scipy.sparse.linalg as linalg
 import matplotlib.pyplot as plt
 
 
@@ -47,8 +48,7 @@ for j in range(len(omega)):
     '''
 #    depth = 2 * skin[j]
     for i in range(100000):
-        tmp = h[-1]
-        depth = tmp * 1.1
+        depth = h[-1] * 1.1
         h = np.append(h, depth)
         T_depth = np.sum(h)
         if T_depth > L:
@@ -106,7 +106,7 @@ for j in range(len(omega)):
     Solve the linear system of equations
     '''
 
-    be = sp.linalg.spsolve(A, bb)
+    be = linalg.spsolve(A, bb)
     b = be[0 : n-1]
     e = be[n:]
 
