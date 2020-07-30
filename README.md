@@ -16,6 +16,7 @@ This course focuses on computational methods used for solving Maxwell’s equati
 * Understand Bayesian inversion and its application to EM inverse problems;
 * Be able to perform EM computations in Matlab/Python.
 
-Requirements: Python 3
+Requirements: Python3 / Matlab
 
-Author: Xiaolong Wei xwei7@uh.edu
+This package created by Xiaolong Wei using python3, any problems please contact:
+Xiaolong Wei xwei7@uh.edu
