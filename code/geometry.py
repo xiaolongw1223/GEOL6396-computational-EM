@@ -9,6 +9,7 @@ Created on Sat Oct 26 16:38:53 2019
 import numpy as np
 import scipy.sparse as sp
 import time
+from tools import sav, sdiff, speye, kron3
 
 norm = np.linalg.norm
 
@@ -232,6 +233,30 @@ class Mesh(object):
 
         return np.array(zmid)
 
+    @ property
+    def nnx(self):
+        '''number of nodes in x direction'''
+
+        return len(self.wcx) + 1
+
+    @ property
+    def nny(self):
+        '''number of nodes in y direction'''
+
+        return len(self.wcy) + 1
+
+    @ property
+    def nnz(self):
+        '''number of nodes in z direction'''
+
+        return len(self.wcz) + 1
+
+
+    @ property
+    def nn(self):
+        '''number of nodes in z direction'''
+
+        return self.nnx * self.nny * self.nnz
 
 
 class Discretize(Mesh):
@@ -377,8 +402,43 @@ class Discretize(Mesh):
         return D
 
 
+    def getNodalGradientMatrix(self, ncz, ncx, ncy):
 
+        self.n1 = ncz
+        self.n2 = ncx
+        self.n3 = ncy
 
+        G1 = kron3(speye(self.n3+1), speye(self.n2+1), sdiff(self.n1))
+        G2 = kron3(speye(self.n3+1), sdiff(self.n2), speye(self.n1+1))
+        G3 = kron3(sdiff(self.n3), speye(self.n2+1), speye(self.n1+1))
+
+        return sp.vstack((G1,
+                          G2,
+                          G3), format = 'csr'
+                )
+
+    def getEdgeToCellCenterMatrix(self, ncz, ncx, ncy):
+
+        self.n1 = ncz
+        self.n2 = ncx
+        self.n3 = ncy
+
+        G1 = kron3(sav(self.n3), sav(self.n2), speye(self.n1))
+        G2 = kron3(sav(self.n3), speye(self.n2), sav(self.n1))
+        G3 = kron3(speye(self.n3), sav(self.n2), sav(self.n1))
+
+        return sp.hstack((G1,
+                          G2,
+                          G3), format = 'csr'
+                )
+
+    def getNodalToCellCenterMatrix(self, ncz, ncx, ncy):
+
+        self.n1 = ncz
+        self.n2 = ncx
+        self.n3 = ncy
+
+        return kron3(sav(self.n3), sav(self.n2), sav(self.n1))
 
 
 class Utils(Mesh):
@@ -465,5 +525,37 @@ class Utils(Mesh):
 
         phi_true_vec = phi_true.flatten('F')
         q_corr = A*phi_true_vec
+
+        return(q_corr)
+
+
+
+    def SourceCorrection_Node(self, A, sigma_H, I, PositiveElectrode_Loc, NegativeElectrode_Loc):
+
+        rho = 1 / sigma_H
+
+        xmod = self.modx
+        ymod = self.mody
+        zmod = self.modz
+
+        phi_true = np.zeros((self.ncz+1, self.ncx+1, self.ncy+1))
+
+        for i in range(self.ncy+1):
+
+            for j in range(self.ncx+1):
+
+                for k in range(self.ncz+1):
+
+                    CellLoc = np.transpose([zmod[k],ymod[j],xmod[i]])# the coordinates of the center of a cell
+
+                    distanceA = np.linalg.norm(CellLoc - PositiveElectrode_Loc)
+                    distanceB = np.linalg.norm(CellLoc - NegativeElectrode_Loc)
+
+                    phi_true[k,j,i] = rho*I*(1./distanceA - 1./distanceB)/(2*np.pi)
+
+        phi_true_vec = phi_true.flatten('F')
+        q_corr = A*phi_true_vec
+
+
 
         return(q_corr)

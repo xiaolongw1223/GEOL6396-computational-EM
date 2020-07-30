@@ -63,7 +63,6 @@ def run(plotIt=True):
     Mf = Afc.T.dot(V.dot(1/sigma))
     Mf2 = Afc.T.dot(V.dot(1/sigma2)) # inhomo
     print("Mf.shape", Mf.shape)
-    print("Mf.type", type(Mf))
 
 
     Mf_inv = sp.diags(1/Mf)
