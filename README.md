@@ -5,6 +5,8 @@ Dept.: Department of Earth and Atmospheric Sciences, University of Houston
 
 Instructor: Dr. Jiajia Sun
 
+Requirements: Python / Matlab
+
 This course focuses on computational methods used for solving Maxwell’s equations in various situations.
 
 * Understand Maxwell’s equations and their geophysical applications;
@@ -16,7 +18,6 @@ This course focuses on computational methods used for solving Maxwell’s equati
 * Understand Bayesian inversion and its application to EM inverse problems;
 * Be able to perform EM computations in Matlab/Python.
 
-Requirements: Python3 / Matlab
+This package created by Xiaolong Wei using python3, any problem please contact:
 
-This package created by Xiaolong Wei using python3, any problems please contact:
 Xiaolong Wei xwei7@uh.edu
