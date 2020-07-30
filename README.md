@@ -1,4 +1,9 @@
 # GEOL6396-ComputationalEM
+Department of Earth and Atmospheric Sciences, University of Houston
+
+GEOL6396-ComputationalEM, Fall semester
+
+Instructor: Dr. Jiajia Sun
 
 This course focuses on computational methods used for solving Maxwell’s equations in various situations.
 
