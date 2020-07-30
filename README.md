@@ -17,4 +17,5 @@ This course focuses on computational methods used for solving Maxwell’s equati
 * Be able to perform EM computations in Matlab/Python.
 
 Requirements: Python 3
+
 Author: Xiaolong Wei xwei7@uh.edu
