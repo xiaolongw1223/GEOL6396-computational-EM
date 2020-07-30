@@ -9,4 +9,7 @@ Brife introductions of the repository are summarized below:
  - "tools.py": a package to deal with basic matrix calculation.
  
  **data** 
- - the true model for the lab3.
+ - the true model for the Lab3.
+ 
+ **tests** 
+ - I tested all the scripts and the generated figs are save in this folder providing a compared results for participators.
