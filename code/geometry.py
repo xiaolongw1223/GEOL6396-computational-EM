@@ -24,7 +24,7 @@ norm = np.linalg.norm
 #
 # Mesh (finished)
 # Discretize (finished)
-#
+# 
 # =============================================================================
 
 
