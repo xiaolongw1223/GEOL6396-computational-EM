@@ -6,7 +6,6 @@ Created on Tue Sep 17 21:57:21 2019
 @author: Xiaolong Wei
 """
 
-
 import numpy as np
 import scipy.sparse as sp
 import scipy.sparse.linalg as linalg
