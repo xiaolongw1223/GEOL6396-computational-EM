@@ -1,11 +1,15 @@
 # GEOL6396-Computational EM
-Time: Fall semester
+**Time:**
+ - Fall semester
 
-Dept.: Department of Earth and Atmospheric Sciences, University of Houston
+**Dept.:**
+ - Department of Earth and Atmospheric Sciences, University of Houston
 
-Instructor: Dr. Jiajia Sun
+**Instructor:**
+ - Dr. Jiajia Sun
 
-Requirements: Python / Matlab
+**Requirements:**
+ - Python / Matlab
 
 This course focuses on computational methods used for solving Maxwell’s equations in various situations.
 
@@ -18,6 +22,5 @@ This course focuses on computational methods used for solving Maxwell’s equati
 * Understand Bayesian inversion and its application to EM inverse problems;
 * Be able to perform EM computations in Matlab/Python.
 
-This package created by Xiaolong Wei using python3, any problem please contact:
-
-Xiaolong Wei xwei7@uh.edu
+ **Authors:**
+  - Xiaolong Wei xwei7@uh.edu
