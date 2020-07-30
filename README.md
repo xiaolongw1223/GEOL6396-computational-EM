@@ -1,6 +1,4 @@
 # GEOL6396-ComputationalEM
-GEOL6396-ComputationalEM
-============================
 Time: Fall semester
 
 Dept.: Department of Earth and Atmospheric Sciences, University of Houston
