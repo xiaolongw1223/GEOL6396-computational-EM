@@ -1,4 +1,4 @@
-# GEOL6396-Computational EM
+# GEOL6396 Computational EM
 **Time:**
  - Fall semester
 
