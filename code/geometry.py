@@ -24,6 +24,7 @@ norm = np.linalg.norm
 #
 # Mesh (finished)
 # Discretize (finished)
+# Utils (finished)
 # 
 # =============================================================================
 
@@ -360,6 +361,8 @@ class Discretize(Mesh):
     def Diff2(self, direc = 'x'):
 
         '''
+        Different with function "Diff"
+        
         In forward finite difference matrix:
 
         X = east = 2
@@ -446,7 +449,7 @@ class Utils(Mesh):
     '''
     This class includes:
 
-    1. SourceCorrection function
+    1. SourceCorrection function (borrow from Dr.Sun's Matlab code)
     2. Conjugate gradient
 
     '''
