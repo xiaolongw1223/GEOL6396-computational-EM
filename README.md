@@ -1,7 +1,5 @@
 # GEOL6396 Computational EM
 
-[![DOI](https://zenodo.org/badge/169800572.svg)](https://zenodo.org/badge/latestdoi/169800572)
-
 **Time:**
  - Fall semester
 
