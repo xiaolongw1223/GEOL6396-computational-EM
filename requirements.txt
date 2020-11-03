@@ -5,3 +5,4 @@ discretize==0.4.10
 simpeg =0.13.0
 time
 datetime
+mpl_toolkits
