@@ -1,6 +1,6 @@
 # GEOL6396 Computational EM
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GEOL6396-Computational-EM/HEAD)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/xiaolongw1223/GEOL6396-Computational-EM.git/HEAD)
 
 **Time:**
  - Fall semester
