@@ -1,0 +1,12 @@
+name: EM
+
+channels:
+  - conda-forge
+  - defaults
+  
+dependencies:
+  - numpy
+  - scipy
+  - matplotlib
+  - discretize
+  - simpeg=0.13.0
