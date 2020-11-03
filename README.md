@@ -1,7 +1,7 @@
 # GEOL6396 Computational EM
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/xiaolongw1223/GEOL6396-Computational-EM.git/HEAD)
-[![License](https://github.com/xiaolongw1223/GEOL6396-Computational-EM/blob/master/LICENSE)]
+[![License](https://img.shields.io/github/license/xiaolongw1223/GEOL6396-Computational-EM.svg)](https://github.com/xiaolongw1223/GEOL6396-Computational-EM/blob/master/LICENSE)
 
 **Time:**
  - Fall semester
