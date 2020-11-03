@@ -1,5 +1,7 @@
 # GEOL6396 Computational EM
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GEOL6396-Computational-EM/HEAD)
+
 **Time:**
  - Fall semester
 
